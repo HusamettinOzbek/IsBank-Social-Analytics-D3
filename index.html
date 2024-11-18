@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>İŞ BANKASI SOSYAL MEDYA YÖNETİM İNCELEMESİ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="photo-1"  src="/picture/isbankasi.svg" alt="">
+            <h1> İŞ BANKASI SOSYAL MEDYA YÖNETİM İNCELEMESİ</h1>
+            <div class="platform-tabs">
+                <button class="tab active" onclick="switchPlatform('X')">X (Twitter)</button>
+                <button class="tab" onclick="switchPlatform('YouTube')">YouTube</button>
+            </div>
+        </div>
+
+        <div class="metrics-overview">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Platform Performansı</div>
+                    <div id="platform-badge" class="metric-badge">X</div>
+                </div>
+                <div class="metric-value" id="platform-followers">-</div>
+                <div class="metric-label">Takipçi / Abone</div>
+                <div class="metric-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="monthly-growth">-</div>
+                        <div class="stat-label">Aylık Büyüme</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-posts">-</div>
+                        <div class="stat-label">Toplam İçerik</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Etkileşim Özeti</div>
+                </div>
+                <div class="metric-value" id="total-engagement-rate">-</div>
+                <div class="metric-label">Ortalama Etkileşim Oranı</div>
+                <div class="metric-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-platform-likes">-</div>
+                        <div class="stat-label">Toplam Beğeni</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-platform-comments">-</div>
+                        <div class="stat-label">Toplam Yorum</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">İçerik Performansı</div>
+                </div>
+                <div class="metric-value" id="avg-view-per-post">-</div>
+                <div class="metric-label">Ortalama Görüntülenme</div>
+                <div class="metric-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="best-performing-day">-</div>
+                        <div class="stat-label">En İyi Performans</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="engagement-trend">-</div>
+                        <div class="stat-label">Etkileşim Trendi</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Etkileşim Dağılımı</div>
+                </div>
+                <div class="metric-value" id="interaction-distribution">-</div>
+                <div class="metric-label">Etkileşim Dağılımı</div>
+                <div class="metric-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="platform-specific-metric">-</div>
+                        <div class="stat-label" id="platform-specific-label">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="response-rate">-</div>
+                        <div class="stat-label">Yanıt Oranı</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">Etkileşim Dağılımı</div>
+                <div id="scatter-plot"></div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">Duygu Analizi Trendi</div>
+                <div id="trend-chart"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
